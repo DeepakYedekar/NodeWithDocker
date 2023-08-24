@@ -17,6 +17,7 @@ services:
   node-app:
     restart: unless-stopped
     build: .
+    image: deepak0001/node-app
     volumes:
       - ./:/app
       - /app/node_modules
