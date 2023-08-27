@@ -30,8 +30,8 @@ services:
     restart: unless-stopped
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_INITDB_ROOT_USERNAME=deepak
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword
     ports:
       - "27017:27017"
     volumes:
