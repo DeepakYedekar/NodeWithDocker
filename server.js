@@ -1,6 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 const app=express();
 const { MONGO_USER, MONGO_PASSWORD, MONGO_IP, MONGO_PORT, REDIS_URL, SESSION_SECRET, PORT } = require('./config/config');
 const session=require('express-session')
@@ -37,7 +38,7 @@ app.use(session({
   }
 }))
 app.get('/api/v1',(req,res)=>{
-  res.send('This is dynamic server');
+  res.send('This is demo server');
 });
 
 app.use('/api/v1/posts',postRouter);
